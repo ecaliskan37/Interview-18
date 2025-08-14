@@ -7,7 +7,9 @@ const useBitcoin = () => {
   const idRef = useRef()
 
   const getData = async () => {
-    setLoading(true)
+    setTimeout(() => {
+      setLoading(true)
+    }, 500)
     await axios
       .get(
         'https://data-api.coindesk.com/index/cc/v1/latest/tick?market=ccix&instruments=BTC-USD&api_key=3be53c044e85d38abb14cb76a969185294a01be2f2ac3d2a2e5fae4e0e6e922c'
